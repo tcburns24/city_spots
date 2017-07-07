@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @city.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @city.state %>
+</p>
+<br>
+
+<div>
+  <h2><%= @city.spots.count %> Spots listed in <%= @city.name %></h2>
+
+  <% @city.spots.each do |spot| %>
+    <p><%= link_to spot.name, city_spot_path(@city, spot) %></p>
+  <% end %>
+</div>
+
+<%= form_for [@city, Spot.new] do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_city_path(@city) %> |
+<%= link_to 'Back', cities_path %>

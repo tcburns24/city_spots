@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spot.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @spot.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_city_spot_path(@spot.city_id, @spot) %> |
+<%= link_to 'Back', city_path(@city) %>
