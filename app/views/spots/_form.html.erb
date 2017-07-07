@@ -1,4 +1,4 @@
-<%= form_for (@spot, @city.spots) do |form| %>
+<%= form_for(@spot, url: edit_city_spot_path(@city, @spot)) do |form| %>
   <% if spot.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(spot.errors.count, "error") %> prohibited this spot from being saved:</h2>
