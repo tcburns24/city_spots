@@ -1,10 +1,10 @@
-<%= form_for(@spot, url: edit_city_spot_path(@city, @spot)) do |form| %>
-  <% if spot.errors.any? %>
+<%= form_for(@spot, url: city_spot_path(@city, @spot)) do |form| %>
+  <% if @spot.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(spot.errors.count, "error") %> prohibited this spot from being saved:</h2>
+      <h2><%= pluralize(@spot.errors.count, "error") %> prohibited this spot from being saved:</h2>
 
       <ul>
-      <% spot.errors.full_messages.each do |message| %>
+      <% @spot.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
