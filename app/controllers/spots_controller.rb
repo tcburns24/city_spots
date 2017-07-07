@@ -33,7 +33,7 @@ class SpotsController < ApplicationController
   def update
     respond_to do |format|
       if @spot.update(spot_params)
-        format.html { redirect_to @spot, notice: 'Spot was successfully updated.' }
+        format.html { redirect_to city_spot_path(@spot), notice: 'Spot was successfully updated.' }
         format.json { render :show, status: :ok, location: @spot }
       else
         format.html { render :edit }
