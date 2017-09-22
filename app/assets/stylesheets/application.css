@@ -14,6 +14,19 @@
  *= require_self
  */
 
+#title_div {
+  position: relative;
+  width: 30%;
+  /*background-color: pink;*/
+  text-align: center;
+  float: left;
+  font-size: 40px;
+  font-family: cursive;
+  color: #0165b2;
+  margin-top: 20px;
+  margin-left: 35%;
+}
+
 #user_dashboard {
   background: linear-gradient(to left top, skyblue, lightblue);
   height: 60px;

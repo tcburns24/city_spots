@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706215936) do
+ActiveRecord::Schema.define(version: 20170922202648) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20170706215936) do
     t.index ["user_id"], name: "index_cities_on_user_id"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.integer "spot_id"
+    t.integer "user_id"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spot_id"], name: "index_comments_on_spot_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
   create_table "spots", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -28,6 +38,11 @@ ActiveRecord::Schema.define(version: 20170706215936) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_spots_on_city_id"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

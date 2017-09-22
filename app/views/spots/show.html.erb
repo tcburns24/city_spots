@@ -11,5 +11,25 @@
 </p>
 
 
+<div id="new_comment_form">
+
+  <% if user_signed_in? %>
+
+    <h3>
+      Post a comment about <%= @spot.name %>
+    </h3>
+
+    <%= form_for [@spot, Comment.new] do |f| %>
+      <div class="field">
+        <%= f.label :comment %>
+        <%= f.text_area :body %>
+      </div>
+    <% end %>
+
+  <% end %>
+
+</div>
+
+
 <%= link_to 'Edit', edit_city_spot_path(@city, @spot) %> |
 <%= link_to 'Back', city_path(@city) %>

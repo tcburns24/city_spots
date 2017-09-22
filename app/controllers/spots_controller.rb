@@ -1,5 +1,5 @@
 class SpotsController < ApplicationController
-  before_action :set_spot, only: [:show, :edit, :update, :destroy]
+  # before_action :set_spot, only: [:show, :edit, :update, :destroy]
 
   def index
     @spots = Spot.all
@@ -7,7 +7,8 @@ class SpotsController < ApplicationController
 
   def show
     @city = City.find(params[:city_id])
-    @spot = @city.spots.find(params[:id])
+    # @spot = @city.spots.find(params[:id])
+    @spot = Spot.find(params[:id])
   end
 
   def new
@@ -28,18 +29,22 @@ class SpotsController < ApplicationController
     redirect_to city_path(@city)
   end
 
-  # PATCH/PUT /spots/1
-  # PATCH/PUT /spots/1.json
   def update
+    @spot = Spot.find(params[:id])
+    @spot.assign_attributes(spot_params)
+
+
+
     respond_to do |format|
       if @spot.update(spot_params)
-        format.html { redirect_to city_spot_path(@spot), notice: 'Spot was successfully updated.' }
+        format.html { redirect_to city_spot_path(@spot.city, @spot), notice: 'Spot was successfully updated.' }
         format.json { render :show, status: :ok, location: @spot }
       else
         format.html { render :edit }
         format.json { render json: @spot.errors, status: :unprocessable_entity }
       end
     end
+    # redirect_to [@spot.city, @spot]
   end
 
   # DELETE /spots/1
