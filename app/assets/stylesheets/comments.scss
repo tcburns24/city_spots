@@ -1,3 +1,25 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.single_comment {
+  background-color: lightgrey;
+  border-style: solid;
+  border-color: black;
+  width: 75%;
+  margin-left: 5%;
+}
+
+#comment_body {
+  margin-left: 3%;
+  font-family: serif;
+  font-size: 18px;
+}
+
+#comment_info {
+  margin-left: 6%;
+  font-family: sans-serif;
+  color: grey;
+  font-size: 11px;
+}

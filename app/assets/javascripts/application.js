@@ -13,3 +13,15 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+var colors = ["#b7d2ff", "#6ba1ff", "#c6ffe8", "#62d6a7"];
+
+var comments = document.getElementsByClassName("single_comment");
+
+for (var i=0, i<comments.length, i++) {
+  if (i % 2 == 0) {
+    comments[i].style.background = "linear-gradient(#b7d2ff, #6ba1ff)";
+  } else {
+    comments[i].style.background = "linear-gradient(#c6ffe8, #62d6a7)";
+  }
+}

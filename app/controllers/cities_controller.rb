@@ -15,7 +15,7 @@ class CitiesController < ApplicationController
 
   # GET /cities/new
   def new
-    @city = current_user.cities.build
+    @city = City.new
   end
 
   # GET /cities/1/edit
@@ -25,7 +25,7 @@ class CitiesController < ApplicationController
   # POST /cities
   # POST /cities.json
   def create
-    @city = current_user.cities.build(city_params)
+    @city = City.new(city_params)
 
     respond_to do |format|
       if @city.save
@@ -70,6 +70,6 @@ class CitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def city_params
-      params.require(:city).permit(:name, :state, :user_id)
+      params.require(:city).permit(:name, :state)
     end
 end

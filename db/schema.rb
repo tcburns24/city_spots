@@ -15,10 +15,8 @@ ActiveRecord::Schema.define(version: 20170922202648) do
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.string "state"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_cities_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -35,9 +33,11 @@ ActiveRecord::Schema.define(version: 20170922202648) do
     t.string "name"
     t.text "description"
     t.integer "city_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_spots_on_city_id"
+    t.index ["user_id"], name: "index_spots_on_user_id"
   end
 
   create_table "topics", force: :cascade do |t|

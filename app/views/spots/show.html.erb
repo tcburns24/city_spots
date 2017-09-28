@@ -1,3 +1,10 @@
+<style type="text/css">
+  <%= raw Rails.application.assets['application.css'].to_s %>
+</style>
+<script type="text/javascript">
+  <%= raw Rails.application.assets['application.js'].to_s %>
+</script>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,15 +26,25 @@
       Post a comment about <%= @spot.name %>
     </h3>
 
-    <%= form_for [@spot, Comment.new] do |f| %>
+    <%= form_for [@city, @spot, Comment.new] do |f| %>
       <div class="field">
         <%= f.label :comment %>
-        <%= f.text_area :body %>
+        <%= f.text_area :body %><br>
+        <%= f.submit %>
       </div>
     <% end %>
 
   <% end %>
 
+</div>
+
+<div id="all_comments">
+  <% @spot.comments.order("created_at DESC").each do |comment| %>
+    <div class="single_comment">
+      <p id='comment_body'><%= comment.body %></p>
+      <p id='comment_info'>Posted by <%= comment.user.email %> on <%= comment.created_at.strftime("%b %d, %Y") %></p>
+    </div>
+  <% end %>
 </div>
 
 
