@@ -1,3 +1,56 @@
 // Place all the styles related to the Cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.city_row {
+  position: relative;
+  height: 225px;
+  width: auto;
+  margin-bottom: 2%;
+}
+
+.city_img {
+  position: relative;
+  display: inline-block;
+  width: 95%;
+  height: 95%;
+  opacity: 0.8;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  transition: all 0.15s ease;
+}
+
+.city_img:hover {
+  position: relative;
+  display: inline-block;
+  width: 95%;
+  height: 95%;
+  opacity: 1.0;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  box-shadow: 3px 3px 5px #888888;
+}
+
+.city {
+  position: relative;
+  display: inline-block;
+  background-size: contain;
+  height: 100%;
+  width: 30%;
+  margin-left: 2%;
+}
+
+.city_name {
+  position: relative;
+  width: 93%;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  top: -15%;
+  text-align: right;
+}

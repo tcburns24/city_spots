@@ -2,28 +2,29 @@
 
 <h1>Cities</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>State</th>
-      <!-- <th>User</th> -->
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="city_row">
+  <%= @cities[0..2].each do |city| %>
+    <div class="city">
+      <%= link_to image_tag(city.image_url, class: "city_img"), city%>
+      <div class="city_name"><%= city.name %></div>
+    </div>
+  <% end %>
+</div>
 
-  <tbody>
-    <% @cities.each do |city| %>
-      <tr>
-        <td><%= link_to city.name, city %></td>
-        <td><%= city.state %></td>
-        <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Delete', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="city_row">
+  <%= @cities[3..5].each do |city| %>
+    <div class="city">
+      <%= link_to image_tag(city.image_url, class: "city_img"), city %>
+      <div class="city_name"><%= city.name %></div>
+    </div>
+  <% end %>
+</div>
 
-<br>
-
-<%= link_to 'New City', new_city_path %>
+<div class="city_row">
+  <%= @cities[6..8].each do |city| %>
+    <div class="city">
+      <%= link_to image_tag(city.image_url, class: "city_img"), city %>
+      <div class="city_name"><%= city.name %></div>
+    </div>
+  <% end %>
+</div>

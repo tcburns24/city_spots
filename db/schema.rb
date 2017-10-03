@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922202648) do
+ActiveRecord::Schema.define(version: 20171003013348) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170922202648) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index ["city_id"], name: "index_spots_on_city_id"
     t.index ["user_id"], name: "index_spots_on_user_id"
   end

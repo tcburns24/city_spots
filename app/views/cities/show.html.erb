@@ -15,7 +15,10 @@
   <h2><%= @city.spots.count %> Spots listed in <%= @city.name %></h2>
 
   <% @city.spots.each do |spot| %>
-    <p><%= link_to spot.name, city_spot_path(@city, spot) %></p>
+    <div class="spot">
+      <%= link_to image_tag(spot.image_url, class: "spot_img"), city_spot_path(@city, spot) %>
+    </div>
+    <div class="spot_name"> <%= spot.name %> </div>
   <% end %>
 </div>
 
@@ -30,12 +33,17 @@
     <%= form_for [@city, Spot.new] do |f| %>
       <div class="field">
         <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: "What's the Spot's name?" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :Image %>
+        <%= f.text_field :image_url, placeholder: "Enter image link URL" %>
       </div>
 
       <div class="field">
         <%= f.label :description %>
-        <%= f.text_area :description %>
+        <%= f.text_area :description, placeholder: "Tell us about this Spot" %>
       </div>
 
       <div>
