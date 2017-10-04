@@ -1,3 +1,30 @@
 // Place all the styles related to the Spots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.spot_row {
+  position: relative;
+  height: 200px;
+  width: auto;
+  margin-bottom: 3%;
+  margin-left: 2%;
+}
+
+.spot_link:hover {
+  background-color: transparent;
+}
+
+.spot_img {
+  position: relative;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 18%;
+  height: 100%;
+  opacity: 0.8;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  transition: all 0.15s ease;
+}

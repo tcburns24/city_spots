@@ -11,15 +11,6 @@
   margin-left: 2%;
 }
 
-// .city {
-//   position: relative;
-//   display: inline-block;
-//   background-size: contain;
-//   height: 100%;
-//   width: 30%;
-//   margin-left: 2%;
-// }
-
 .city_link:hover {
   background-color: transparent;
 }
@@ -62,12 +53,37 @@
   box-shadow: 3px 3px 5px #888888;
 }
 
-// .city_name {
-//   width: 93%;
-//   font-size: 30px;
-//   color: #ff91af;
-//   font-weight: bold;
-//   top: 50%;
-//   float: right;
-//   text-align: right;
-// }
+
+// ==============================================
+//    SPOTS:
+// ==============================================
+
+
+.spot_row {
+  position: relative;
+  height: 200px;
+  width: auto;
+  margin-bottom: 3%;
+  margin-left: 2%;
+}
+
+.spot_link:hover {
+  background-color: transparent;
+}
+
+.spot_img {
+  position: relative;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 175px;
+  height: 175px;
+  margin-left: 1%;
+  margin-right: 1%;
+  opacity: 0.8;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  transition: all 0.15s ease;
+}
