@@ -2,29 +2,19 @@
 
 <h1>Cities</h1>
 
-<div class="city_row">
-  <%= @cities[0..2].each do |city| %>
-    <div class="city">
-      <%= link_to image_tag(city.image_url, class: "city_img"), city%>
-      <div class="city_name"><%= city.name %></div>
-    </div>
-  <% end %>
-</div>
-
-<div class="city_row">
-  <%= @cities[3..5].each do |city| %>
-    <div class="city">
-      <%= link_to image_tag(city.image_url, class: "city_img"), city %>
-      <div class="city_name"><%= city.name %></div>
-    </div>
-  <% end %>
-</div>
-
-<div class="city_row">
-  <%= @cities[6..8].each do |city| %>
-    <div class="city">
-      <%= link_to image_tag(city.image_url, class: "city_img"), city %>
-      <div class="city_name"><%= city.name %></div>
-    </div>
-  <% end %>
-</div>
+<% i = 0 %>
+<% if @cities.count % 3 == 0 %>
+  <% rows = (cities / 3) %>
+<% else %>
+  <% rows = ((@cities.count / 3) + 1) %>
+<% end %>
+<% rows.times do %>
+  <div class="city_row">
+    <% @cities[i..(i+2)].each do |city| %>
+      <%= link_to city, class: "city_link" do %>
+        <div class="city_img" style="background-image:url('<%= city.image_url %>')"><p><%= city.name %></p></div>
+      <% end %>
+    <% end %>
+  </div>
+  <% i += 3 %>
+<% end %>

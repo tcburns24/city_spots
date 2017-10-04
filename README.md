@@ -1,11 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Welcome to City_Spots! An open source web app designed to help travelers research their destinations, and share worthwhile spots with their wanderlust brethren. 
 
 * Ruby version
+Built with Ruby 2.3.1
 
 * System dependencies
 

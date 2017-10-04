@@ -8,14 +8,32 @@
   height: 225px;
   width: auto;
   margin-bottom: 2%;
+  margin-left: 2%;
+}
+
+// .city {
+//   position: relative;
+//   display: inline-block;
+//   background-size: contain;
+//   height: 100%;
+//   width: 30%;
+//   margin-left: 2%;
+// }
+
+.city_link:hover {
+  background-color: transparent;
 }
 
 .city_img {
   position: relative;
   display: inline-block;
-  width: 95%;
-  height: 95%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30%;
+  height: 100%;
+  margin: 1% 1% 1% 1%;
   opacity: 0.8;
+  color: white;
   border-radius: 8px;
   border-style: solid;
   border-color: black;
@@ -23,11 +41,19 @@
   transition: all 0.15s ease;
 }
 
+.city_img p {
+  position: relative;
+  width: 98%;
+  top: 75%;
+  // background-color: pink;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+}
+
 .city_img:hover {
   position: relative;
-  display: inline-block;
-  width: 95%;
-  height: 95%;
   opacity: 1.0;
   border-radius: 8px;
   border-style: solid;
@@ -36,21 +62,12 @@
   box-shadow: 3px 3px 5px #888888;
 }
 
-.city {
-  position: relative;
-  display: inline-block;
-  background-size: contain;
-  height: 100%;
-  width: 30%;
-  margin-left: 2%;
-}
-
-.city_name {
-  position: relative;
-  width: 93%;
-  font-size: 30px;
-  color: white;
-  font-weight: bold;
-  top: -15%;
-  text-align: right;
-}
+// .city_name {
+//   width: 93%;
+//   font-size: 30px;
+//   color: #ff91af;
+//   font-weight: bold;
+//   top: 50%;
+//   float: right;
+//   text-align: right;
+// }

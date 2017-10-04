@@ -13,14 +13,14 @@
 
 <div>
   <h2><%= @city.spots.count %> Spots listed in <%= @city.name %></h2>
-
-  <% @city.spots.each do |spot| %>
-    <div class="spot">
-      <%= link_to image_tag(spot.image_url, class: "spot_img"), city_spot_path(@city, spot) %>
-    </div>
-    <div class="spot_name"> <%= spot.name %> </div>
-  <% end %>
 </div>
+
+<% i = 0 %>
+<% if @city.spots.count % 5 == 0 %>
+  <% rows = (@city.spots / 5) %>
+<% else %>
+  <% rows = ((@city.spots.count / 5) + 1) %>
+<% end %>
 
 <div id="new_spot_form">
 
