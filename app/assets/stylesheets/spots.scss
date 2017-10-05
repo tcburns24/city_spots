@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#spot_info {
+  position: relative;
+  margin-top: 26%;
+  z-index: 2;
+}
+
+#spot_info h2 {
+  font-size: 30px;
+  margin-left: 2%;
+}
+
 .spot_row {
   position: relative;
   height: 200px;
@@ -19,12 +30,34 @@
   display: inline-block;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 18%;
-  height: 100%;
+  width: 175px;
+  height: 175px;
+  margin-left: 1%;
+  margin-right: 2%;
   opacity: 0.8;
   border-radius: 50%;
   border-style: solid;
   border-color: black;
-  border-width: 1px;
+  border-width: 3px;
   transition: all 0.15s ease;
+}
+
+.spot_img:hover {
+  opacity: 1.0;
+  border-color: #a0d4e7;
+}
+
+.spot_img p {
+  text-align: center;
+  position: relative;
+  color: #0c0ce8;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  top: 100%;
+}
+
+#new_spot_form {
+  z-index: 2;
+  display: none;
 }
