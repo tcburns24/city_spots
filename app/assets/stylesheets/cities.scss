@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#banner {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+}
+
+#gradient {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+
+#banner_text {
+  position: relative;
+  font-family: cursive;
+  font-size: 4.0em;
+  color: white;
+  bottom: 83%;
+  left: 5%;
+}
 
 .city_row {
   position: relative;
@@ -10,15 +33,6 @@
   margin-bottom: 2%;
   margin-left: 2%;
 }
-
-// .city {
-//   position: relative;
-//   display: inline-block;
-//   background-size: contain;
-//   height: 100%;
-//   width: 30%;
-//   margin-left: 2%;
-// }
 
 .city_link:hover {
   background-color: transparent;
@@ -61,13 +75,3 @@
   border-width: 1px;
   box-shadow: 3px 3px 5px #888888;
 }
-
-// .city_name {
-//   width: 93%;
-//   font-size: 30px;
-//   color: #ff91af;
-//   font-weight: bold;
-//   top: 50%;
-//   float: right;
-//   text-align: right;
-// }
