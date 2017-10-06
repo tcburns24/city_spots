@@ -7,6 +7,9 @@
   </div>
 </div>
 
+<div id='modal-holder'>
+  <%= link_to 'Add a new Spot', new_city_spot_path, data: { modal: true } %>
+</div>
 
 <div id='spot_info'>
   <h2><%= @city.spots.count %> Spots listed in <%= @city.name %></h2>
