@@ -13,6 +13,57 @@
   margin-left: 2%;
 }
 
+#spot_info p {
+  text-decoration: underline;
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+#cancel_btn {
+  position: absolute;
+  right: 3%;
+  top: 8%;
+  height: 1.0em;
+  width: 1.0em;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  color: indianred;
+  transition: all 0.2s ease;
+}
+
+#form_title {
+  position: absolute;
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#form_fields {
+  position: relative;
+  margin-left: 10%;
+  margin-top: 5%;
+  display: inline-block;
+}
+
+#form_guidelines {
+  position: relative;
+  margin-top: 5%;
+  margin-left: 8%;
+  display: inline-block;
+  width: 45%;
+}
+
+#form_guidelines p {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 10%
+}
+
 .spot_row {
   position: relative;
   height: 200px;
@@ -39,7 +90,7 @@
   border-style: solid;
   border-color: black;
   border-width: 3px;
-  transition: all 0.15s ease;
+  transition: all 0.5s ease;
 }
 
 .spot_img:hover {
@@ -51,13 +102,25 @@
   text-align: center;
   position: relative;
   color: #0c0ce8;
-  font-size: 18px;
+  font-size: 16px;
   font-family: sans-serif;
   font-weight: bold;
   top: 100%;
+  width: 100%;
 }
 
 #new_spot_form {
-  z-index: 2;
+  z-index: 1;
   display: none;
+  position: relative;
+  width: 65%;
+  margin-left: 17.5%;
+  border-style: solid;
+  border-color: black;
+  border-radius: 12px;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  transition: all 1.15s ease;
 }
