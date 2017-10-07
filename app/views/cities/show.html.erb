@@ -7,9 +7,56 @@
   </div>
 </div>
 
-
 <div id='spot_info'>
   <h2><%= @city.spots.count %> Spots listed in <%= @city.name %></h2>
+  <p id="new_spot_link">Submit a New Spot</p>
+
+  <div id="new_spot_form">
+    <% if user_signed_in? %>
+
+      <div id='cancel_btn'>X</div>
+
+      <div id='form_title'>
+        Know a Spot in <%= @city.name %>?
+      </div>
+
+      <div id='form_fields'>
+        <%= form_for [@city, Spot.new] do |f| %>
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name, placeholder: "What's the Spot's name?", :size => "32" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image_url %>
+            <%= f.text_field :image_url, placeholder: "Enter image link URL", :size => "32" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_area :description, placeholder: "Tell us about this Spot", cols: 32, rows: 6 %>
+          </div>
+
+          <div class="field">
+            <%= f.submit %>
+          </div>
+        </div>
+
+        <div id='form_guidelines'>
+          <p> Spot Submission Guidelines:</p>
+          <ul>
+            <li>Only submit spots that you have been to.</li>
+            <li>Explain what the spot is, who might be interested in going there.</li>
+            <li>Refrain from vulgar language and negative reviews. City Spots is an exposé site, not a business bashing site.</li>
+          </ul>
+        </div>
+      <% end %>  <!-- end form_for -->
+
+    <% end %>    <!-- end `if user_signed_in` -->
+
+  </div>
+
+
   <!-- set the correct number of rows with a loop -->
   <% i = 0 %>
   <% if @city.spots.count % 5 == 0 %>
@@ -27,44 +74,12 @@
         <% end %>
       <% end %>
     </div>
+    <% i += 5 %>
   <% end %>
 
 </div>
 
-<div id='reveal_form'>
-  Know a Spot?
-</div>
 
-<div id="new_spot_form">
-  <% if user_signed_in? %>
-    <h3>
-      Submit a new Spot in <%= @city.name %>:
-    </h3>
-
-    <%= form_for [@city, Spot.new] do |f| %>
-      <div class="field">
-        <%= f.label :name %>
-        <%= f.text_field :name, placeholder: "What's the Spot's name?" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :image_url %>
-        <%= f.text_field :image_url, placeholder: "Enter image link URL" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :description %>
-        <%= f.text_area :description, placeholder: "Tell us about this Spot" %>
-      </div>
-
-      <div>
-        <%= f.submit %>
-      </div>
-    <% end %>
-
-  <% end %>
-
-</div>
 
 <%= link_to 'Edit', edit_city_path(@city) %> |
 <%= link_to 'Back', cities_path %>
