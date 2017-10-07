@@ -8,7 +8,7 @@
 </div>
 
 <div id='spot_info'>
-  <h2><%= @city.spots.count %> Spots listed in <%= @city.name %></h2>
+  <h2><%= @city.spots.count %> Spots listed in <%= @city.name %>:</h2>
   <p id="new_spot_link">Submit a New Spot</p>
 
   <div id="new_spot_form">
@@ -45,9 +45,9 @@
         <div id='form_guidelines'>
           <p> Spot Submission Guidelines:</p>
           <ul>
-            <li>Only submit spots that you have been to.</li>
-            <li>Explain what the spot is, who might be interested in going there.</li>
-            <li>Refrain from vulgar language and negative reviews. City Spots is an exposé site, not a business bashing site.</li>
+            <li>Submit only spots that you have been to.</li>
+            <li>Explain what the spot is, and who might be interested in going there.</li>
+            <li>Refrain from vulgar language and negative reviews. City Spots is for exposé, not bashing businesses.</li>
           </ul>
         </div>
       <% end %>  <!-- end form_for -->

@@ -8,10 +8,10 @@ window.addEventListener('load', function() {
 
 // give underline hover-over to new_spot_link:
   new_spot_link.addEventListener('mouseover', function() {
-    this.style.textDecoration = "";
+    this.style.color = "#2972e8";
   })
   new_spot_link.addEventListener('mouseout', function() {
-    this.style.textDecoration = "underline";
+    this.style.color = "black";
   })
 
 // click new_spot_link to access new_spot_form
