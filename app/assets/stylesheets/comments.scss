@@ -4,10 +4,10 @@
 
 
 .single_comment {
-  background-color: lightgrey;
-  border-style: solid;
-  border-color: black;
-  width: 75%;
+  border-top-style: solid;
+  border-color: darkgrey;
+  border-top-width: 2px;
+  width: 90%;
   margin-left: 5%;
 }
 
@@ -22,4 +22,40 @@
   font-family: sans-serif;
   color: grey;
   font-size: 11px;
+}
+
+#comments {
+  position: relative;
+}
+
+#new_comment_form {
+  display: none;
+  margin-left: 5%;
+}
+
+#cancel_comment {
+  display: inline-block;
+  position: relative;
+  margin-left: 5%;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #e0e0e0;
+  border-radius: 4px;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 12px;
+}
+
+#comment_intro {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#comment_form_link {
+  position: relative;
+  display: inline-block;
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
 }

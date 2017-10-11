@@ -5,6 +5,7 @@ window.addEventListener('load', function() {
   var new_spot_form = document.getElementById('new_spot_form');
   var page = document.getElementById('page');
   var cancel_btn = document.getElementById('cancel_btn');
+  var comment_form_link = document.getElementById('comment_form_link');
 
 // give underline hover-over to new_spot_link:
   new_spot_link.addEventListener('mouseover', function() {
@@ -32,5 +33,6 @@ window.addEventListener('load', function() {
     this.style.backgroundColor = "white";
     this.style.color = "indianred";
   })
+
 
 })
