@@ -7,46 +7,37 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @spot.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @spot.description %>
-</p>
-
-
-<div id="new_comment_form">
-
-  <% if user_signed_in? %>
-
-    <h3>
-      Post a comment about <%= @spot.name %>
-    </h3>
-
-    <%= form_for [@city, @spot, Comment.new] do |f| %>
-      <div class="field">
-        <%= f.label :comment %>
-        <%= f.text_area :body %><br>
-        <%= f.submit %>
-      </div>
-    <% end %>
-
-  <% end %>
-
+<div id="spot_banner_title">
+  <h2><%= @spot.name %></h2>
+  <p><%= @spot.city.name %></p>
 </div>
 
-<div id="all_comments">
+<div id="spot_banner" style="background-image:url('<%= @spot.image_url %>')"></div>
+
+
+<div id="comments">
+  <div id='comment_intro'><h3>Comments about <%= @spot.name %></h3></div> | <div id='comment_form_link'>New Comment</div>
+
+  <div id="new_comment_form">
+    <% if user_signed_in? %>
+      <%= form_for [@city, @spot, Comment.new] do |f| %>
+        <div class="field">
+          <%= f.text_area :body, cols: 35, rows: 2 %><br>
+          <%= f.submit %>
+          <div class="btn" id="cancel_comment"> Cancel </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
   <% @spot.comments.order("created_at DESC").each do |comment| %>
     <div class="single_comment">
       <p id='comment_body'><%= comment.body %></p>
       <p id='comment_info'>Posted by <%= comment.user.email %> on <%= comment.created_at.strftime("%b %d, %Y") %></p>
     </div>
   <% end %>
-</div>
 
+</div>
 
 <%= link_to 'Edit', edit_city_spot_path(@city, @spot) %> |
 <%= link_to 'Back', city_path(@city) %>
