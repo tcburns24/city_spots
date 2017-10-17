@@ -14,8 +14,6 @@
   <div id="new_spot_form">
     <% if user_signed_in? %>
 
-      <div id='cancel_btn'>X</div>
-
       <div id='form_title'>
         Know a Spot in <%= @city.name %>?
       </div>
@@ -39,6 +37,7 @@
 
           <div class="field">
             <%= f.submit %>
+            <div id='cancel_btn'>Cancel</div>
           </div>
         </div>
 

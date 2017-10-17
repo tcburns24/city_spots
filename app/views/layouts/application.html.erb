@@ -19,5 +19,6 @@
       <% end %>
     </div>
     <%= yield %>
+    <%= javascript_include_tag "#{params[:controller]}/#{params[:action]}.js" if Rails.application.assets.resolve("#{params[:controller]}/#{params[:action]}.js").present? %>
   </body>
 </html>
