@@ -35,7 +35,7 @@
       <p id='comment_body'><%= comment.body %></p>
       <p id='comment_info'>Posted by <%= comment.user.email %> on <%= comment.created_at.strftime("%b %d, %Y") %></p>
       <% if comment.user == current_user %>
-        <%= link_to " • Delete", @comment, method: :delete %>
+        <%= link_to "Delete", city_spot_comment_url(@city, @spot, comment), method: :delete %>
       <% end %>
     </div>
   <% end %>

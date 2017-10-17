@@ -21,13 +21,3 @@ new_spot_link.addEventListener('click', function() {
 cancel_btn.addEventListener('click', function() {
   new_spot_form.style.display = "none";
 })
-
-cancel_btn.addEventListener('mouseover', function() {
-  this.style.backgroundColor = "indianred";
-  this.style.color = "white";
-  this.style.borderRadius = "50%";
-})
-cancel_btn.addEventListener('mouseout', function() {
-  this.style.backgroundColor = "white";
-  this.style.color = "indianred";
-})

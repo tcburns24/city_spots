@@ -62,9 +62,11 @@ class CommentsController < ApplicationController
 
 
   def destroy
+    @city = City.find(params[:city_id])
+    @spot = Spot.find(params[:spot_id])
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to city_spot_path(@city, @spot), notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
