@@ -4,8 +4,8 @@ Welcome to CitySpots! An open source web app designed to help travelers research
 
 CitySpots was built with Ruby 2.3.1 on Rails 5.1.2.
 
-* **Quick Start**<br>
-If you have Ruby version 2.0.0 or greater, and Rails version 3.0.0 or greater installed on your computer:
+**GETTING STARTED**<br>
+If you have Ruby version 2.0.0 or greater, and Rails version 3.0.0 or greater installed on your computer, fork and clone this repository, then run it locally with:
 ```
 rails s
 ```
@@ -83,5 +83,8 @@ $ gem install bundler
 4. Install Rails
 ```
 $ rvm use ruby-2.3.1@rails5.0 --create
-$ gem install rails 
+$ gem install rails
 ```
+<br><br>
+**CONTRIBUTING**<br>
+CitySpots welcomes all developers, novice and experienced, to contribute to the project. Before making a contribution, please read the [Contributing Guide](../CONTRIBUTING.md). 
