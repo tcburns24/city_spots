@@ -87,4 +87,4 @@ $ gem install rails
 ```
 <br><br>
 **CONTRIBUTING**<br>
-CitySpots welcomes all developers, novice and experienced, to contribute to the project. Before making a contribution, please read the [Contributing Guide](../CONTRIBUTING.md). 
+CitySpots welcomes all developers, novice and experienced, to contribute to the project. Before making a contribution, please read the [Contributing Guide](CONTRIBUTING.md). 
