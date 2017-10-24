@@ -23,6 +23,7 @@ It's fine to share a differing opinion about a spot as long as it's done tactful
 This includes:
   * Swear words
   * Sexually charged language
+  * Comments on a person's gender, race, ethnicity, socio-economic background, education, or religion.
 
 **CONTRIBUTING**<br>
 CitySpots welcomes all developers, novice and experienced, to contribute to the project. Before making a contribution, please read the [Contributing Guide](CONTRIBUTING.md).
