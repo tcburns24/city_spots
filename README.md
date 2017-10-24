@@ -4,87 +4,25 @@ Welcome to CitySpots! An open source web app designed to help travelers research
 
 CitySpots was built with Ruby 2.3.1 on Rails 5.1.2.
 
-**GETTING STARTED**<br>
-If you have Ruby version 2.0.0 or greater, and Rails version 3.0.0 or greater installed on your computer, fork and clone this repository, then run it locally with:
-```
-rails s
-```
-If you don't:<br>
-Follow these instructions according to your operating system. <br>
+## What's It All About?
+CitySpots is a website developed for those who proudly claim membership to the wanderlust community. If you love to travel, and love to share your traveling experiences, CitySpots is for you. CitySpots' ultimate goal is to emerge as the most trusted site where travelers can seek recommendations in preparation to travel.
 
-**I) Mac OSX:**<br>
-1. Install Homebrew:
-```
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+To reach this goal, please be mindful of the User's Guidelines below. Adhering to the guidelines is essential in cultivating CitySpots' credibility and affect on others in the community.
 
-2. Install Ruby:
-```
-$ brew install ruby
-```
+## User Guidelines
+### 1. Post a spot only if you have been to it.
+Travel recommendations are must useful when they come from firsthand accounts. If you have not physically been to a spot, don't post it or comment on it.
 
-2a. OPTIONAL - Install RVM:
-```
-$ \curl -sSL https://get.rvm.io | bash
-```
+### 2. Post facts, not opinions.
+When posting or commenting on a spot, start with facts. When were you there? What type of venue is the spot? Who is the clientele? Facts are the most efficient way to paint a picture of a spot for a potential future-visitor. After you've shared facts about the spot, feel free to share your opinions unless they are disrespectful. "The steak au poivre was dry and a bit too chewy for my taste" is not disrespectful to the business but "the steak au poivre was crummy don't get it" is.
 
-3. Install Rails:
-```
-$ gem install rails -v 5.1.4
-$ rbenv rehash
-```
-<br>
-**II) Windows 10:**<br>
+### 3. Disagree politely.
+It's fine to share a differing opinion about a spot as long as it's done tactfully. "Actually, I found the steak au poivre to be quite juicy and delicious" is a helpful way to provide future visitors with a different point of view on a spot. "No, Stupid! The steak au poivre was great. What are you talking about!?" does not respect the original comment nor does it help future visitors form an unbiased frame on which to build their own opinion.
 
-1. Install Ruby:
-```
-$ sudo apt-get update
-$ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
-```
+###4. Refrain from vulgar language.
+This includes:
+  * Swear words
+  * Sexually charged language
 
-2. Install RVM:
-```
-$ sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-$ curl -sSL https://get.rvm.io | bash -s stable
-$ source ~/.rvm/scripts/rvm
-$ rvm install 2.4.2
-$ rvm use 2.4.2 --default
-$ ruby -v
-```
-
-3. Install Bundler:
-```
-$ gem install bundler
-```
-
-4. Install Rails:
-```
-gem install rails -v 5.1.4
-```
-<br>
-**III) Linux:**<br>
-
-1. Install Ruby with RVM:
-```
-$ \curl -L https://get.rvm.io | bash -s stable --ruby
-```
-
-2. Install Node.js
-```
-$ sudo apt-get install nodejs
-```
-
-3. Install Bundler
-```
-$ gem install bundler
-```
-
-4. Install Rails
-```
-$ rvm use ruby-2.3.1@rails5.0 --create
-$ gem install rails
-```
-<br><br>
 **CONTRIBUTING**<br>
-CitySpots welcomes all developers, novice and experienced, to contribute to the project. Before making a contribution, please read the [Contributing Guide](CONTRIBUTING.md). 
+CitySpots welcomes all developers, novice and experienced, to contribute to the project. Before making a contribution, please read the [Contributing Guide](CONTRIBUTING.md).
