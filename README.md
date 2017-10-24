@@ -19,7 +19,7 @@ When posting or commenting on a spot, start with facts. When were you there? Wha
 ### 3. Disagree politely.
 It's fine to share a differing opinion about a spot as long as it's done tactfully. "Actually, I found the steak au poivre to be quite juicy and delicious" is a helpful way to provide future visitors with a different point of view on a spot. "No, Stupid! The steak au poivre was great. What are you talking about!?" does not respect the original comment nor does it help future visitors form an unbiased frame on which to build their own opinion.
 
-###4. Refrain from vulgar language.
+### 4. Refrain from vulgar language.
 This includes:
   * Swear words
   * Sexually charged language
