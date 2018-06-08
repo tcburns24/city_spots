@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div id='banner' style="background-image:url('<%= @city.image_url %>')">
+  <div id='nav_links'>Sample text</div>
   <div id='gradient'></div>
   <div id='banner_text'>
     <%= @city.name %>, <%= @city.state %>
@@ -76,9 +77,9 @@
     <% i += 5 %>
   <% end %>
 
+  <div id='nav_links'>
+    <%= link_to 'Edit', edit_city_path(@city) %> |
+    <%= link_to 'Back', cities_path %>
+  </div>
+
 </div>
-
-
-
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', cities_path %>
