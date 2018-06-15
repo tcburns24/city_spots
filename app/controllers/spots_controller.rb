@@ -34,7 +34,7 @@ class SpotsController < ApplicationController
         format.json { render json: @spot.errors, status: :unprocessable_entity }
       end
     end
-    # redirect_to @spot
+    # redirect_to @city
   end
 
   def update

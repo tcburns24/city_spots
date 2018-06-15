@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <!-- <div id='title_div'><b><a href='/'>City Spots</a></b></div> -->
     <div id='user_dashboard'>
+      <div id='title_div'><a href='/'>City Spots</a></div>
       <% if user_signed_in? %>
         <p>Signed in as <strong><%= current_user.email %></strong> || <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></p>
       <% else %>

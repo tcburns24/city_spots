@@ -18,13 +18,13 @@
   position: relative;
   width: 30%;
   /*background-color: pink;*/
-  text-align: center;
+  text-align: left;
   float: left;
   font-size: 40px;
   font-family: cursive;
   color: #0165b2;
-  margin-top: 20px;
-  margin-left: 35%;
+  margin-top: 15px;
+  margin-left: 10%;
 }
 
 #user_dashboard {
